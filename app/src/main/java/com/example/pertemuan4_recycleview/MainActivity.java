@@ -27,11 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void addData() {
         mahasiswaArrayList = new ArrayList<>();
-        mahasiswaArrayList.add(new Mahasiswa("Winter", "1918021",
-                "2019"));
-        mahasiswaArrayList.add(new Mahasiswa("Yuna", "2118022",
-                "2021"));
-        mahasiswaArrayList.add(new Mahasiswa("Nana", "1918031",
-                "2019"));
+        mahasiswaArrayList.add(new Mahasiswa("Winter", "1918021", "2019",R.drawable.winter));
+        mahasiswaArrayList.add(new Mahasiswa("Yuna", "2118022", "2021",R.drawable.yunaa));
+        mahasiswaArrayList.add(new Mahasiswa("Nana", "1918031", "2019",R.drawable.nana1));
         }
 }
+

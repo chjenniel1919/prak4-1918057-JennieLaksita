@@ -3,6 +3,7 @@ package com.example.pertemuan4_recycleview;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,7 +15,8 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.Maha
 
     private ArrayList<Mahasiswa> dataList;
 
-    public MahasiswaAdapter(ArrayList<Mahasiswa> dataList) { this.dataList = dataList;
+    public MahasiswaAdapter(ArrayList<Mahasiswa> dataList) {
+        this.dataList = dataList;
     }
 
     @NonNull
@@ -26,9 +28,9 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.Maha
     }
 
     public void onBindViewHolder(MahasiswaViewHolder holder, int position) {
+        holder.Logo.setImageResource(dataList.get(position).getLogo());
         holder.txtNama.setText(dataList.get(position).getNama());
         holder.txtNim.setText(dataList.get(position).getNim());
-
         holder.txtAngkatan.setText(dataList.get(position).getAngkatan());
     }
 
@@ -39,12 +41,18 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.Maha
 
     public class MahasiswaViewHolder extends RecyclerView.ViewHolder{
         private TextView txtNama, txtNim, txtAngkatan;
+        private ImageView Logo;
 
-        public MahasiswaViewHolder(View itemView) { super(itemView);
-            txtNama = (TextView) itemView.findViewById(R.id.txt_nama);
-            txtNim = (TextView) itemView.findViewById(R.id.txt_nim);
-            txtAngkatan = (TextView) itemView.findViewById(R.id.txt_angkatan);
+        public MahasiswaViewHolder(View itemView) {
+            super(itemView);
+            Logo = (ImageView)
+                    itemView.findViewById(R.id.img_logo);
+            txtNama = (TextView)
+                    itemView.findViewById(R.id.txt_nama);
+            txtNim = (TextView)
+                    itemView.findViewById(R.id.txt_nim);
+            txtAngkatan = (TextView)
+                    itemView.findViewById(R.id.txt_angkatan);
         }
     }
 }
-

@@ -2,15 +2,25 @@ package com.example.pertemuan4_recycleview;
 
 public class Mahasiswa {
     private String nama, nim, angkatan;
+    private int logo;
 
-    public Mahasiswa(String nama, String nim, String angkatan) {
+    public Mahasiswa(String nama, String nim, String angkatan, int logo) {
         this.nama = nama;
         this.nim = nim;
         this.angkatan = angkatan;
+        this.logo = logo;
     }
 
     public String getNama() {
         return nama;
+    }
+
+    public int getLogo() {
+        return logo;
+    }
+
+    public void setLogo(int logo) {
+        this.logo = logo;
     }
 
     public void setNama(String nama) {
